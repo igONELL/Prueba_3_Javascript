@@ -21,6 +21,8 @@
       <div class="input-group input-group-lg">
         <form>
         <input type="text" id="rut" name="rut"  required oninput="checkRut(this)" placeholder="Ingrese RUT">
+
+        <input type="text" id="rut" name="rut"  required oninput="checkRut(this)" placeholder="Digito verificador">
         <button type="submit">Validar RUT</button>
     </form>
       </div>
