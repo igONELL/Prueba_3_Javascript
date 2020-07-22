@@ -1,8 +1,6 @@
-
-
 html, body {
     font-size: 10px;
-    background: #e5ebf4;
+    background: #fff;
     font-family: 'Open Sans', sans-serif !important;
 }
 
@@ -20,11 +18,11 @@ h1 {
 }
 
 header {
-  background:#2b303b;
+  background:#000;
   text-align:center;
   padding:10px;
 }
-header p {color:#96b5b4;}
+header p {color:#fff;}
 
 #wrapper {
   width : 90%;
@@ -34,4 +32,3 @@ header p {color:#96b5b4;}
 #msgerror {
     font-size:1.4em;
 }
-
