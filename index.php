@@ -18,7 +18,7 @@
     <div id="container">
       <p>&nbsp;</p>
       <div class="input-group input-group-lg">
-        <form action="prueba.php" method="GET" onsubmit="return checkRut(this.rut, this.digitoVerificador)">
+        <form action="prueba.php" method="GET" onsubmit="return checkRut(this.rut.value, this.digitoVerificador.value)">
         <input type="text" id="rut" name="rut"  required> <a>-</a>
         <input type="text" id="digitoVerificador" name="digitoVerificador"  required >
         <input type="submit" value="validar">

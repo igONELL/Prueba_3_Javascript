@@ -1,31 +1,35 @@
-function checkRut(rut,digitoVerificador) {
-    var valor = rut.value.replace('.', '');
-        valor = valor.replace('-', '');
-//var cuerpo = valor.slice(0, -1);
-var cuerpo = rut.value;
-
-    var resultado = (cuerpo.length <= 8 && digitoVerificador.value.length == 1);
+function checkRut(rut, digitoVerificador) {
+    
+    var resultado = (rut.length <= 8 && digitoVerificador.length == 1);
 
     if (!resultado) return resultado;
-    alert("luchito1");
-
 
     var suma = 0;
     var multiplo = 2;
-    var index = 0;
-    for (i = 1; i <= cuerpo.length; i++) {
-        index = multiplo * valor.charAt(cuerpo.length + i);
-        suma = suma + index;
-        if (multiplo <= 7) {
-            multiplo = multiplo + 1;
-            alert("Luchito2");
+    for(var i = rut.length -1; i >= 0; i--)
+     {alert("del for " + multiplo +" "+ rut.charAt(i));
+        suma += multiplo * rut.charAt(i);
+        if (multiplo < 7) {
+            multiplo++;
+
         } else {
             multiplo = 2;
         }
     }
-    
+    alert("sumatoria"+suma);
     var dvEsperado = 11 - (suma % 11);
+    alert("dvcalculado"+dvEsperado);
+    if (dvEsperado == 10) {
+        dvEsperado = 1;
+    } else if (dvEsperado == 11) {
+        dvEsperado = 0;
+    }
+    alert(dvEsperado);
+    alert(digitoVerificador);
     resultado = dvEsperado == digitoVerificador;
-
+    alert(resultado);
     return resultado;
 }
+
+
+
