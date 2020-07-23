@@ -15,13 +15,13 @@
 </nav>
 </header>
   <content>
-    <div id="wrapper" >
+    <div id="container">
       <p>&nbsp;</p>
       <div class="input-group input-group-lg">
-        <form action="index.php" method="GET">
+        <form action="prueba.php" method="GET" onsubmit="return checkRut(this.rut, this.digitoVerificador)">
         <input type="text" id="rut" name="rut"  required> <a>-</a>
         <input type="text" id="digitoVerificador" name="digitoVerificador"  required >
-        <button id="btnValidar" onclick="validarRUT()">Validar</button>
+        <input type="submit" value="validar">
     </form>
   </content>
 </body> 
