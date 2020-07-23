@@ -29,6 +29,11 @@ header p {color:#fff;}
   margin : 0px auto;
 }
 
+#digitoVerificador{
+    max-width: 30px;
+}
+
 #msgerror {
     font-size:1.4em;
 }
+

@@ -1,32 +1,35 @@
 function checkRut(rut) {
     var valor = rut.value.replace('.', '');
-    //valor = valor.replace('-', '');
-    //cuerpo = valor.slice(0, -1);
-    //digitoVerificador = valor.slice(-1).toUpperCase();
+    var valor = valor.replace('-', '');
+    var cuerpo = valor.slice(0, -1);
+    var digitoVerificador = valor.slice(-1).toUpperCase();
 
-to
-    rut.value = cuerpo
-    if (cuerpo.length >= 7) {
+
+    if (cuerpo.value.length > 8 || digitoVerificador.value.length > 1) {
+        cuerpo.value = "";
+        digitoVerificador.value = "";
         alert("RUT equivocado ha ingresado mas digitos de lo requerido");
-        return false;
+    } else{
+        alert("Es correcto")
     }
 
 
     suma = 0;
     multiplo = 2;
-    for (i = 1; i <= cuerpo.length; i++) {
-        index = multiplo * valor.charAt(cuerpo.length + i);
+    for (i = 1; i <= cuerpo.value.length; i++) {
+        index = multiplo * valor.charAt(cuerpo.value.length + i);
         suma = suma + index;
         if (multiplo < 7) {
             multiplo = multiplo + 1;
+            alert("El numero ingresado es demasiado largo")
         } else {
             multiplo = 2;
         }
 
+
         dvEsperado = 11 - (suma % 11);
         digitoVerificador = (digitoVerificador == 'K') ? 10 : digitoVerificador;
-        digitoVerificador = (digitoVerificador == 0) ? 11 : digitoVerificador;
-        if (dvEsperado != digitoVerificador) { alert("ta mala la wea"); return false; }
-        alert('ta weniooooooo');
+        digitoVerificador = (digitoVerificador == 0) ? 11 : {
+        }
     }
 }
