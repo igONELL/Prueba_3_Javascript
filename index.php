@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
-<link rel="stylesheet" href="estilo.css">
-<script src="rut.js"></script>
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="/assets/js/main.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Validador de RUT</title>
